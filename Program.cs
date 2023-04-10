@@ -16,7 +16,7 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new LoginForm());
         }
     }
 }

@@ -8,9 +8,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -65,13 +65,13 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954
 
                 if (p.tipoUsuario == 1)
                 {
-                    AdminForm mf = new AdminForm((int)p.tipoUsuario);
-                    mf.id = p.id;
-                    mf.nombre = p.nombres;
-                    mf.email = p.email;
+                    Form1 mf = new Form1((int)p.tipoUsuario);
+                    //mf.id = p.id;
+                    //mf.nombre = p.nombres; PARA MANEJO PERSONALIZADO EN PANTALLAS.
+                    //mf.email = p.email;
                     mf.Show();
-                    MessageBox.Show("Has ingresado como administrador.");
-                    this.Close();
+                    //MessageBox.Show("Has ingresado como administrador.");
+                    this.Hide();
                 }
             }
         }

@@ -1,6 +1,6 @@
 ﻿namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -78,11 +78,11 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(135, 381);
+            this.checkBox1.Location = new System.Drawing.Point(126, 353);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.Size = new System.Drawing.Size(99, 17);
             this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.Text = "Ver Contraseña";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckStateChanged += new System.EventHandler(this.checkBox1_CheckStateChanged);
             // 
@@ -127,7 +127,7 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -142,7 +142,7 @@
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
+            this.Name = "LoginForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Status)).EndInit();

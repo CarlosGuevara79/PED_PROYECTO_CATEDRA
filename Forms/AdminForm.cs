@@ -12,10 +12,10 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Forms
 {
     public partial class AdminForm : Form
     {
-        public int id { get; set; } //Guarda el id del usuario que inicio sesion
-        public string email { get; set; } //Guarda el email del usuario que inicio sesion
-        public string nombre { get; set; } //Guarad el nombre del usuario
-        private int UserType { get; set; }
+        //public int id { get; set; } 
+        //public string email { get; set; } 
+        //public string nombre { get; set; } getter y setter de los valores personalizados.
+        //private int UserType { get; set; }
 
         public AdminForm(int Type)
         {
