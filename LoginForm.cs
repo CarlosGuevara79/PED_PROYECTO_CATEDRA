@@ -72,7 +72,7 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954
                     mf.Show();
                     //MessageBox.Show("Has ingresado como administrador.");
                     this.Hide();
-                }
+                }//agregar mas if en base al tipo de usuario
             }
         }
 
