@@ -142,6 +142,7 @@
     <Content Include="Resources\Loading.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Universidad_don_bosco.jpg" />
     <None Include="Resources\Loading2.gif" />
   </ItemGroup>
   <ItemGroup>
