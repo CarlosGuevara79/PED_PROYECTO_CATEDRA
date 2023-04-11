@@ -13,8 +13,9 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Forms
 {
     public partial class Form3 : Form
     {
-        int con1, x, y, ag,a1,a2;
+        int con1, x, y, ag, a1, a2;
         public Cola bancocola = new Cola();
+        public Configuracion_1 config = new Configuracion_1();
         public Form3()
         {
             InitializeComponent();
@@ -24,10 +25,13 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Forms
             ag = 0;
             a1 = 0;
             a2 = 0;
-            panel_l.BackColor = Color.FromArgb(100, Color.Blue);
+            config.imagen(pictureBox1);
+            panel_l.BackColor = Color.FromArgb(config.R(), config.G(), config.B());
+            this.BackColor = Color.FromArgb(config.R1(), config.G1(), config.B1());
+
         }
 
-        public void DibujarCola( Nodo_cola nodo)
+        public void DibujarCola(Nodo_cola nodo)
         {
 
 
@@ -78,17 +82,17 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Forms
                         recor = recor.next;
                     }
                 }
-                
+
                 ag = ag + 62;
                 a1 = a1 + 62;
-                
+
 
             }
             else if (nodo.Prioridad == 2)
             {
                 Transition t = new Transition(new TransitionType_EaseInEaseOut(500));
                 t.add(paneldibujo, "Left", x);
-                t.add(paneldibujo, "Top", a2+a1);
+                t.add(paneldibujo, "Top", a2 + a1);
                 t.run();
                 Transition.run(paneldibujo, "BackColor", Color.Yellow, new TransitionType_Linear(200));
 
@@ -97,7 +101,7 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Forms
                 paneldibujo.Controls.Add(lblf); paneldibujo.Controls.Add(lblc);
                 bancocola.EncoPrioridad(nodo);
 
-                if(bancocola.primero.next != null || bancocola.primero != null)
+                if (bancocola.primero.next != null || bancocola.primero != null)
                 {
                     Nodo_cola recor = bancocola.primero.next;
                     int y2 = 62;
@@ -114,7 +118,7 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Forms
                         recor = recor.next;
                     }
                 }
-                
+
                 ag = ag + 62;
                 a2 = a2 + 62;
             }
@@ -148,7 +152,7 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Forms
                 paneldibujo.Dispose();
 
                 //se crea un enumerator para rrecorer la cola
-                Nodo_cola recor =bancocola.primero;
+                Nodo_cola recor = bancocola.primero;
                 int y2 = 0;
                 while (recor != null)
                 {

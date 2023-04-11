@@ -31,6 +31,10 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Forms
         {
             this.button1 = new System.Windows.Forms.Button();
             this.dgv_datosCola = new System.Windows.Forms.DataGridView();
+            this.Campo1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Campo2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Campo3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Campo4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_datosCola)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,10 +51,35 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Forms
             // dgv_datosCola
             // 
             this.dgv_datosCola.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_datosCola.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Campo1,
+            this.Campo2,
+            this.Campo3,
+            this.Campo4});
             this.dgv_datosCola.Location = new System.Drawing.Point(121, 12);
             this.dgv_datosCola.Name = "dgv_datosCola";
             this.dgv_datosCola.Size = new System.Drawing.Size(646, 392);
             this.dgv_datosCola.TabIndex = 1;
+            // 
+            // Campo1
+            // 
+            this.Campo1.HeaderText = "Campo1";
+            this.Campo1.Name = "Campo1";
+            // 
+            // Campo2
+            // 
+            this.Campo2.HeaderText = "Campo2";
+            this.Campo2.Name = "Campo2";
+            // 
+            // Campo3
+            // 
+            this.Campo3.HeaderText = "Campo3";
+            this.Campo3.Name = "Campo3";
+            // 
+            // Campo4
+            // 
+            this.Campo4.HeaderText = "Campo4";
+            this.Campo4.Name = "Campo4";
             // 
             // Form4
             // 
@@ -70,5 +99,9 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Forms
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgv_datosCola;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Campo1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Campo2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Campo3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Campo4;
     }
 }

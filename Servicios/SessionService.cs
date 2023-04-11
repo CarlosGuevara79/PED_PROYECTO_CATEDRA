@@ -24,7 +24,7 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Servicios
                     catch (Exception e)
                     {
                         usuario p = new usuario();
-                        Console.WriteLine("Ocurrio un error en -> {}",e);
+                        Console.WriteLine("Ocurrio un error en -> {0}",e);
                         p.nombres = "Exception";
                         return p;
                     }

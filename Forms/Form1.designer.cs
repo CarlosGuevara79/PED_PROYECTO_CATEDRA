@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
+            this.BtnBuscar = new FontAwesome.Sharp.IconButton();
             this.BtnEditar2 = new FontAwesome.Sharp.IconButton();
             this.BtnEditar = new FontAwesome.Sharp.IconButton();
             this.BtnGuardarCambios = new FontAwesome.Sharp.IconButton();
@@ -40,7 +41,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.PictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Pcb_logoprew = new System.Windows.Forms.PictureBox();
             this.TxtNomNegocio = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
@@ -71,32 +72,13 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.BtnBuscar = new FontAwesome.Sharp.IconButton();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
-            this.iconButton8 = new FontAwesome.Sharp.IconButton();
-            this.iconButton9 = new FontAwesome.Sharp.IconButton();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.OPFL_img = new System.Windows.Forms.OpenFileDialog();
             this.GroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pcb_logoprew)).BeginInit();
             this.GroupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -123,7 +105,7 @@
             this.GroupBox2.Controls.Add(this.label5);
             this.GroupBox2.Controls.Add(this.label4);
             this.GroupBox2.Controls.Add(this.label3);
-            this.GroupBox2.Controls.Add(this.PictureBox2);
+            this.GroupBox2.Controls.Add(this.Pcb_logoprew);
             this.GroupBox2.Controls.Add(this.TxtNomNegocio);
             this.GroupBox2.Controls.Add(this.label2);
             this.GroupBox2.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -135,6 +117,27 @@
             this.GroupBox2.TabIndex = 474;
             this.GroupBox2.TabStop = false;
             this.GroupBox2.Text = "INFORMACIÓN NEGOCIO ";
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.BtnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscar.Font = new System.Drawing.Font("Californian FB", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscar.ForeColor = System.Drawing.Color.White;
+            this.BtnBuscar.IconChar = FontAwesome.Sharp.IconChar.FolderPlus;
+            this.BtnBuscar.IconColor = System.Drawing.Color.White;
+            this.BtnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnBuscar.IconSize = 16;
+            this.BtnBuscar.Location = new System.Drawing.Point(29, 205);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(74, 24);
+            this.BtnBuscar.TabIndex = 501;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnBuscar.UseVisualStyleBackColor = false;
             // 
             // BtnEditar2
             // 
@@ -265,16 +268,16 @@
             this.label3.TabIndex = 476;
             this.label3.Text = "Logo:";
             // 
-            // PictureBox2
+            // Pcb_logoprew
             // 
-            this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
-            this.PictureBox2.Location = new System.Drawing.Point(7, 54);
-            this.PictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(124, 144);
-            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox2.TabIndex = 475;
-            this.PictureBox2.TabStop = false;
+            this.Pcb_logoprew.Image = ((System.Drawing.Image)(resources.GetObject("Pcb_logoprew.Image")));
+            this.Pcb_logoprew.Location = new System.Drawing.Point(7, 54);
+            this.Pcb_logoprew.Margin = new System.Windows.Forms.Padding(4);
+            this.Pcb_logoprew.Name = "Pcb_logoprew";
+            this.Pcb_logoprew.Size = new System.Drawing.Size(124, 144);
+            this.Pcb_logoprew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Pcb_logoprew.TabIndex = 475;
+            this.Pcb_logoprew.TabStop = false;
             // 
             // TxtNomNegocio
             // 
@@ -299,6 +302,8 @@
             // 
             // GroupBox1
             // 
+            this.GroupBox1.Controls.Add(this.label22);
+            this.GroupBox1.Controls.Add(this.comboBox5);
             this.GroupBox1.Controls.Add(this.iconButton3);
             this.GroupBox1.Controls.Add(this.BtnQuitar);
             this.GroupBox1.Controls.Add(this.iconButton1);
@@ -313,7 +318,7 @@
             this.GroupBox1.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.Location = new System.Drawing.Point(457, 48);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(439, 255);
+            this.GroupBox1.Size = new System.Drawing.Size(439, 557);
             this.GroupBox1.TabIndex = 475;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "TIPOS DE SERVICIOS";
@@ -330,7 +335,7 @@
             this.iconButton3.IconColor = System.Drawing.Color.White;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 16;
-            this.iconButton3.Location = new System.Drawing.Point(319, 23);
+            this.iconButton3.Location = new System.Drawing.Point(319, 54);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(92, 25);
             this.iconButton3.TabIndex = 498;
@@ -351,7 +356,7 @@
             this.BtnQuitar.IconColor = System.Drawing.Color.White;
             this.BtnQuitar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnQuitar.IconSize = 16;
-            this.BtnQuitar.Location = new System.Drawing.Point(319, 73);
+            this.BtnQuitar.Location = new System.Drawing.Point(319, 165);
             this.BtnQuitar.Name = "BtnQuitar";
             this.BtnQuitar.Size = new System.Drawing.Size(92, 24);
             this.BtnQuitar.TabIndex = 496;
@@ -372,7 +377,7 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 16;
-            this.iconButton1.Location = new System.Drawing.Point(145, 206);
+            this.iconButton1.Location = new System.Drawing.Point(154, 361);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(142, 24);
             this.iconButton1.TabIndex = 495;
@@ -384,7 +389,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(120, 163);
+            this.textBox2.Location = new System.Drawing.Point(129, 313);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(190, 22);
@@ -395,7 +400,7 @@
             this.label10.AutoSize = true;
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label10.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 167);
+            this.label10.Location = new System.Drawing.Point(4, 317);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(118, 18);
             this.label10.TabIndex = 490;
@@ -405,7 +410,7 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Californian FB", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(117, 118);
+            this.comboBox1.Location = new System.Drawing.Point(129, 256);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(170, 22);
@@ -417,7 +422,7 @@
             this.label8.AutoSize = true;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label8.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(48, 122);
+            this.label8.Location = new System.Drawing.Point(48, 260);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 18);
             this.label8.TabIndex = 488;
@@ -427,7 +432,7 @@
             // 
             this.CmbQuitarServicio.Font = new System.Drawing.Font("Californian FB", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbQuitarServicio.FormattingEnabled = true;
-            this.CmbQuitarServicio.Location = new System.Drawing.Point(117, 75);
+            this.CmbQuitarServicio.Location = new System.Drawing.Point(126, 165);
             this.CmbQuitarServicio.Margin = new System.Windows.Forms.Padding(2);
             this.CmbQuitarServicio.Name = "CmbQuitarServicio";
             this.CmbQuitarServicio.Size = new System.Drawing.Size(170, 22);
@@ -448,7 +453,7 @@
             this.label9.AutoSize = true;
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label9.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 79);
+            this.label9.Location = new System.Drawing.Point(4, 169);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(106, 18);
             this.label9.TabIndex = 9;
@@ -668,279 +673,42 @@
             this.iconButton4.UseVisualStyleBackColor = false;
             this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
-            // BtnBuscar
+            // comboBox5
             // 
-            this.BtnBuscar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.BtnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscar.Font = new System.Drawing.Font("Californian FB", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBuscar.ForeColor = System.Drawing.Color.White;
-            this.BtnBuscar.IconChar = FontAwesome.Sharp.IconChar.FolderPlus;
-            this.BtnBuscar.IconColor = System.Drawing.Color.White;
-            this.BtnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnBuscar.IconSize = 16;
-            this.BtnBuscar.Location = new System.Drawing.Point(29, 205);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(74, 24);
-            this.BtnBuscar.TabIndex = 501;
-            this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.comboBox5.Font = new System.Drawing.Font("Californian FB", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "Baja",
+            "Media",
+            "Alta"});
+            this.comboBox5.Location = new System.Drawing.Point(120, 85);
+            this.comboBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(190, 22);
+            this.comboBox5.TabIndex = 501;
+            this.comboBox5.Text = "Seleccione";
             // 
-            // groupBox4
+            // label22
             // 
-            this.groupBox4.Controls.Add(this.iconButton9);
-            this.groupBox4.Controls.Add(this.groupBox7);
-            this.groupBox4.Controls.Add(this.groupBox6);
-            this.groupBox4.Controls.Add(this.groupBox5);
-            this.groupBox4.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(456, 309);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(437, 306);
-            this.groupBox4.TabIndex = 504;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "MÓDULO DE ATENCIÓN";
+            this.label22.AutoSize = true;
+            this.label22.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label22.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(38, 85);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(72, 18);
+            this.label22.TabIndex = 502;
+            this.label22.Text = "Prioridad:";
             // 
-            // label18
+            // OPFL_img
             // 
-            this.label18.AutoSize = true;
-            this.label18.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label18.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(7, 27);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(77, 18);
-            this.label18.TabIndex = 502;
-            this.label18.Text = "N° De Caja:";
+            this.OPFL_img.FileName = "openFileDialog1";
             // 
-            // comboBox4
-            // 
-            this.comboBox4.Font = new System.Drawing.Font("Californian FB", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.comboBox4.Location = new System.Drawing.Point(90, 23);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(77, 22);
-            this.comboBox4.TabIndex = 499;
-            this.comboBox4.Text = "Seleccione";
-            // 
-            // iconButton5
-            // 
-            this.iconButton5.BackColor = System.Drawing.Color.DarkGreen;
-            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton5.ForeColor = System.Drawing.Color.White;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.CheckSquare;
-            this.iconButton5.IconColor = System.Drawing.Color.White;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 16;
-            this.iconButton5.Location = new System.Drawing.Point(172, 23);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(34, 22);
-            this.iconButton5.TabIndex = 499;
-            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton5.UseVisualStyleBackColor = false;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.label18);
-            this.groupBox5.Controls.Add(this.iconButton5);
-            this.groupBox5.Controls.Add(this.comboBox4);
-            this.groupBox5.Location = new System.Drawing.Point(10, 21);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(230, 98);
-            this.groupBox5.TabIndex = 503;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Caja";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.iconButton6);
-            this.groupBox6.Controls.Add(this.textBox7);
-            this.groupBox6.Controls.Add(this.label19);
-            this.groupBox6.Location = new System.Drawing.Point(248, 21);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(164, 98);
-            this.groupBox6.TabIndex = 504;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Pantalla";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label19.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(7, 27);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(110, 18);
-            this.label19.TabIndex = 502;
-            this.label19.Text = "Tamaño Fuente:";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(117, 27);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(32, 22);
-            this.textBox7.TabIndex = 504;
-            // 
-            // iconButton6
-            // 
-            this.iconButton6.BackColor = System.Drawing.Color.RoyalBlue;
-            this.iconButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton6.Font = new System.Drawing.Font("Californian FB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton6.ForeColor = System.Drawing.Color.White;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.AngleDoubleRight;
-            this.iconButton6.IconColor = System.Drawing.Color.White;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.IconSize = 1;
-            this.iconButton6.Location = new System.Drawing.Point(41, 53);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(76, 38);
-            this.iconButton6.TabIndex = 505;
-            this.iconButton6.Text = "Mostrar Pantalla";
-            this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.iconButton6.UseVisualStyleBackColor = false;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.iconButton8);
-            this.groupBox7.Controls.Add(this.iconButton7);
-            this.groupBox7.Controls.Add(this.textBox9);
-            this.groupBox7.Controls.Add(this.textBox8);
-            this.groupBox7.Controls.Add(this.label21);
-            this.groupBox7.Controls.Add(this.label20);
-            this.groupBox7.Location = new System.Drawing.Point(10, 128);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(402, 106);
-            this.groupBox7.TabIndex = 505;
-            this.groupBox7.TabStop = false;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label20.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(7, 18);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(59, 18);
-            this.label20.TabIndex = 504;
-            this.label20.Text = "Codigo:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label21.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(111, 18);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(119, 18);
-            this.label21.TabIndex = 505;
-            this.label21.Text = "Tipo de atención:";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(7, 40);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(89, 22);
-            this.textBox8.TabIndex = 504;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(111, 40);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(255, 22);
-            this.textBox9.TabIndex = 502;
-            // 
-            // iconButton7
-            // 
-            this.iconButton7.BackColor = System.Drawing.Color.DarkGreen;
-            this.iconButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton7.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton7.ForeColor = System.Drawing.Color.White;
-            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.iconButton7.IconColor = System.Drawing.Color.White;
-            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.IconSize = 16;
-            this.iconButton7.Location = new System.Drawing.Point(10, 69);
-            this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Size = new System.Drawing.Size(92, 25);
-            this.iconButton7.TabIndex = 499;
-            this.iconButton7.Text = "Añadir";
-            this.iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton7.UseVisualStyleBackColor = false;
-            // 
-            // iconButton8
-            // 
-            this.iconButton8.BackColor = System.Drawing.Color.Firebrick;
-            this.iconButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton8.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton8.ForeColor = System.Drawing.Color.White;
-            this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.iconButton8.IconColor = System.Drawing.Color.White;
-            this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton8.IconSize = 16;
-            this.iconButton8.Location = new System.Drawing.Point(114, 69);
-            this.iconButton8.Name = "iconButton8";
-            this.iconButton8.Size = new System.Drawing.Size(92, 24);
-            this.iconButton8.TabIndex = 499;
-            this.iconButton8.Text = "Remover";
-            this.iconButton8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton8.UseVisualStyleBackColor = false;
-            // 
-            // iconButton9
-            // 
-            this.iconButton9.BackColor = System.Drawing.Color.Green;
-            this.iconButton9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.iconButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton9.Font = new System.Drawing.Font("Californian FB", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton9.ForeColor = System.Drawing.Color.White;
-            this.iconButton9.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.iconButton9.IconColor = System.Drawing.Color.White;
-            this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton9.IconSize = 16;
-            this.iconButton9.Location = new System.Drawing.Point(146, 260);
-            this.iconButton9.Name = "iconButton9";
-            this.iconButton9.Size = new System.Drawing.Size(142, 24);
-            this.iconButton9.TabIndex = 504;
-            this.iconButton9.Text = "Guardar Cambios";
-            this.iconButton9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton9.UseVisualStyleBackColor = false;
-            // 
-            // Configuración
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(906, 627);
-            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.iconButton4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.lbl3);
@@ -950,22 +718,15 @@
             this.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Configuración";
+            this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.GroupBox2.ResumeLayout(false);
             this.GroupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pcb_logoprew)).EndInit();
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -978,7 +739,7 @@
         internal System.Windows.Forms.Label label5;
         internal System.Windows.Forms.Label label4;
         internal System.Windows.Forms.Label label3;
-        internal System.Windows.Forms.PictureBox PictureBox2;
+        internal System.Windows.Forms.PictureBox Pcb_logoprew;
         internal System.Windows.Forms.TextBox TxtNomNegocio;
         internal System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
@@ -1014,23 +775,9 @@
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton BtnBuscar;
-        internal System.Windows.Forms.GroupBox groupBox4;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        internal System.Windows.Forms.Label label18;
-        private FontAwesome.Sharp.IconButton iconButton9;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private FontAwesome.Sharp.IconButton iconButton8;
-        private FontAwesome.Sharp.IconButton iconButton7;
-        internal System.Windows.Forms.TextBox textBox9;
-        internal System.Windows.Forms.TextBox textBox8;
-        internal System.Windows.Forms.Label label21;
-        internal System.Windows.Forms.Label label20;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private FontAwesome.Sharp.IconButton iconButton6;
-        internal System.Windows.Forms.TextBox textBox7;
-        internal System.Windows.Forms.Label label19;
-        private System.Windows.Forms.GroupBox groupBox5;
+        internal System.Windows.Forms.Label label22;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.OpenFileDialog OPFL_img;
     }
 }
 
