@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using System.Collections;
+using System.Drawing;
 
 namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Forms
 {
@@ -22,49 +24,114 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Forms
             config = new Configuracion_1();
             servicos = new List<string>();
             prioridades = new List<string>();
+            try
+            {
+                servicos = config.servicio();
+                prioridades = config.prioridad_serv();
+                CmbQuitarServicio.DataSource = servicos;
+                cmbPreview.DataSource = servicos;
+                config.imagen(Pcb_logoprew);
+                label7.ForeColor = Color.FromArgb(config.R(), config.G(), config.B());
+                label6.ForeColor = Color.FromArgb(config.R1(), config.G1(), config.B1());
+                TxtNomNegocio.Text = config.Nombre_Negocio();
+                txbCampo1.Text = config.Campo1();
+                txbCampo2.Text = config.Campo2();
+                txbCampo3.Text = config.Campo3();
+                txbCampo4.Text = config.Campo4();
+                
+
+
+            }
+            catch
+            {
+
+            }
         }
 
-        
 
-
-
-        private void iconButton2_Click(object sender, EventArgs e)
+        private void iconButton2_Click_1(object sender, EventArgs e)
         {
-            config.Guardar_Campos(textBox6, textBox5, textBox4, textBox3);
+            config.Guardar_Campos(txbCampo1, txbCampo2, txbCampo3, txbCampo4);
+            txbCampo1.Clear();
+            txbCampo2.Clear();
+            txbCampo3.Clear();
+            txbCampo4.Clear();
         }
 
-        private void iconButton3_Click(object sender, EventArgs e)
+        private void iconButton3_Click_1(object sender, EventArgs e)
         {
-            servicos.Add(TxtAgregarServicio.Text);
-            if (comboBox5.SelectedItem.ToString() == "Baja")
+           if(TxtAgregarServicio.Text!="" && cmbprioridad.SelectedIndex != -1)
             {
-                prioridades.Add("1");
+                servicos.Add(TxtAgregarServicio.Text);
+                if (cmbprioridad.SelectedItem.ToString() == "Baja")
+                {
+                    prioridades.Add("1");
+                }
+                if (cmbprioridad.SelectedItem.ToString() == "Media")
+                {
+                    prioridades.Add("2");
+                }
+                if (cmbprioridad.SelectedItem.ToString() == "Alta")
+                {
+                    prioridades.Add("3");
+                }
+                cmbPreview.DataSource = null;
+                CmbQuitarServicio.DataSource = null;
+                cmbPreview.DataSource = servicos;
+                CmbQuitarServicio.DataSource = servicos;
+                cmbPreview.SelectedIndex = 0;
+                CmbQuitarServicio.SelectedIndex = 0;
+                TxtAgregarServicio.Clear();
             }
-            if (comboBox5.SelectedItem.ToString() == "Media")
+            else
             {
-                prioridades.Add("2");
+                MessageBox.Show("Verifique que la prioridad se hya selccionado y que no dejo campo vacio");
             }
-            if (comboBox5.SelectedItem.ToString() == "Alta")
-            {
-                prioridades.Add("3");
-            }
+               
+           
+            
+           
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void iconButton1_Click_1(object sender, EventArgs e)
         {
             config.Guardar_Servicios(servicos, prioridades);
         }
 
-        private void BtnBuscar_Click(object sender, EventArgs e)
+        private void BtnQuitar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+          
+               servicos.RemoveAt(CmbQuitarServicio.SelectedIndex);
+               prioridades.RemoveAt(CmbQuitarServicio.SelectedIndex);
+
+                cmbPreview.DataSource = null;
+                CmbQuitarServicio.DataSource = null;
+                cmbPreview.DataSource = servicos;
+                CmbQuitarServicio.DataSource = servicos;
+                cmbPreview.SelectedIndex = 0;
+                CmbQuitarServicio.SelectedIndex = 0;
+                
+                
+            }
+            catch
+            {
+                MessageBox.Show("Un error a ocurrido al cambiar los datos");
+            }
+            
+        }
+
+        private void BtnGuardarCambios_Click_1(object sender, EventArgs e)
+        {
+            config.Guardar_InformacionDeNegocio(OPFL_img, TxtNomNegocio, r, g, b, r1, g1, b1);
+            TxtNomNegocio.Clear();
+        }
+
+        private void BtnBuscar_Click_1(object sender, EventArgs e)
         {
             config.seleccionar(OPFL_img, Pcb_logoprew);
         }
-
-        private void BtnGuardarCambios_Click(object sender, EventArgs e)
-        {
-            config.Guardar_InformacionDeNegocio(OPFL_img, TxtNomNegocio, r, g, b, r1, g1, b1);
-        }
-
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
@@ -74,7 +141,7 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Forms
             // Allows the user to get help. (The default is false.)
             MyDialog.ShowHelp = true;
             // Sets the initial color select to the current text color.
-            MyDialog.Color = textBox1.ForeColor;
+            MyDialog.Color =Color.Black;
 
             // Update the text box color if the user clicks OK 
             if (MyDialog.ShowDialog() == DialogResult.OK)
@@ -93,7 +160,7 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Forms
             // Allows the user to get help. (The default is false.)
             MyDialog.ShowHelp = true;
             // Sets the initial color select to the current text color.
-            MyDialog.Color = textBox1.ForeColor;
+            MyDialog.Color = Color.Black;
 
             // Update the text box color if the user clicks OK 
             if (MyDialog.ShowDialog() == DialogResult.OK)

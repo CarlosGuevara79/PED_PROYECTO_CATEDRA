@@ -21,33 +21,38 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Forms
             Vcola = new Form3();
             Vcola.Show();
             Ccola = new Form4(Vcola);
-            Ccola.Show();
-            cmb_prioridad.SelectedIndex = 0;
+            Ccola.Show(); 
             config = new Configuracion_1();
-            config.imagen(PictureBox2);
-            groupBox1.Text = config.Nombre_Negocio();
-            label2.Text = config.Campo1();
-            label3.Text = config.Campo2();
-            label4.Text = config.Campo3();
-            label5.Text = config.Campo4();
-            cmb_prioridad.DataSource = config.servicio();
-            this.BackColor = Color.FromArgb(config.R1(), config.G1(), config.B1());
-            label1.BackColor = Color.FromArgb(config.R(), config.G(), config.B());
+            try
+            {
+                cmb_prioridad.SelectedIndex = 0;
+                config.imagen(PictureBox2);
+                groupBox1.Text = config.Nombre_Negocio();
+                label2.Text = config.Campo1();
+                label3.Text = config.Campo2();
+                label4.Text = config.Campo3();
+                label5.Text = config.Campo4();
+                cmb_prioridad.DataSource = config.servicio();
+                this.BackColor = Color.FromArgb(config.R1(), config.G1(), config.B1());
+                label1.BackColor = Color.FromArgb(config.R(), config.G(), config.B());
+            }
+            catch
+            {
+
+            }
+            
 
 
 
         }
 
 
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             Nodo_cola datos = new Nodo_cola();
-            string[] priori = config.prioridad_serv();
+            string[] priori = config.prioridad_serv().ToArray();
             datos.Campo1 = txt_campo1.Text;
             datos.Campo2 = txt_campo2.Text;
             datos.Campo3 = txt_campo3.Text;

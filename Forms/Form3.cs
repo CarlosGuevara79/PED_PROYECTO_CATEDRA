@@ -25,9 +25,17 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Forms
             ag = 0;
             a1 = 0;
             a2 = 0;
-            config.imagen(pictureBox1);
-            panel_l.BackColor = Color.FromArgb(config.R(), config.G(), config.B());
-            this.BackColor = Color.FromArgb(config.R1(), config.G1(), config.B1());
+            try
+            {
+                config.imagen(pictureBox1);
+                panel_l.BackColor = Color.FromArgb(config.R(), config.G(), config.B());
+                this.BackColor = Color.FromArgb(config.R1(), config.G1(), config.B1());
+            }
+            catch
+            {
+
+            }
+           
 
         }
 

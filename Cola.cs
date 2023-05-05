@@ -34,10 +34,24 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954
             else return false;
         }
 
-        public void VerContenido()
+        public List<Nodo_cola> ConvertirALista()
         {
-            
-            
+            if (Estavacia())
+            {
+                return null;
+            }
+            else
+            {
+                List<Nodo_cola> ColaList = new List<Nodo_cola>();
+                Nodo_cola aux = new Nodo_cola();
+                aux = primero;
+                while (aux != null)
+                {
+                    ColaList.Add(aux);
+                    aux = aux.next;
+                }
+                return ColaList;
+            }
         }
        
         public Nodo_cola Desencolar()

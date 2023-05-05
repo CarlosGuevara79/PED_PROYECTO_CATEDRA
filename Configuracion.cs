@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -90,14 +91,14 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954
             return linea[3];
         }
 
-        public string[] servicio()
+        public List<string>  servicio()
         {
-            string[] linea = File.ReadAllLines(URL_datos2);
+            List<string> linea = File.ReadAllLines(URL_datos2).ToList();
             return linea;
         }
-        public string[] prioridad_serv()
+        public List<string> prioridad_serv()
         {
-            string[] linea = File.ReadAllLines(URL_datos3);
+            List<string> linea = File.ReadAllLines(URL_datos3).ToList();
             return linea;
         }
 
@@ -195,5 +196,7 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954
             }
 
         }
+
+        
     }
 }

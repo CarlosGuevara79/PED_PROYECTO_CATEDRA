@@ -18,17 +18,37 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Forms
         {
             InitializeComponent();
             colab = a;
-            Campo1.HeaderText = colab.config.Campo1();
-            Campo2.HeaderText = colab.config.Campo2();
-            Campo3.HeaderText = colab.config.Campo3();
-            Campo4.HeaderText = colab.config.Campo4();
-            this.BackColor = Color.FromArgb(colab.config.R1(), colab.config.G1(), colab.config.B1());
+            try
+            {
+                this.BackColor = Color.FromArgb(colab.config.R1(), colab.config.G1(), colab.config.B1());
+            }
+            catch
+            {
+
+            }
+            
 
         }
 
         public void cargarDatos()
         {
+            dgv_datosCola.DataSource = colab.bancocola.ConvertirALista();
+            
+            try
+            {
+                dgv_datosCola.Columns.Remove("Prioridad");
+                dgv_datosCola.Columns.Remove("NodoV");
+                dgv_datosCola.Columns.Remove("Fila");
+                dgv_datosCola.Columns.Remove("Caja");
+                dgv_datosCola.Columns["Campo1"].HeaderText = colab.config.Campo1();
+                dgv_datosCola.Columns["Campo2"].HeaderText = colab.config.Campo2();
+                dgv_datosCola.Columns["Campo3"].HeaderText = colab.config.Campo3();
+                dgv_datosCola.Columns["Campo4"].HeaderText = colab.config.Campo4();
+            }
+            catch
+            {
 
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

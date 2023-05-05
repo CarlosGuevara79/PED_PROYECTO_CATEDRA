@@ -35,7 +35,6 @@
             this.BtnEditar2 = new FontAwesome.Sharp.IconButton();
             this.BtnEditar = new FontAwesome.Sharp.IconButton();
             this.BtnGuardarCambios = new FontAwesome.Sharp.IconButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,12 +44,14 @@
             this.TxtNomNegocio = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.cmbprioridad = new System.Windows.Forms.ComboBox();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.BtnQuitar = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbPreview = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.CmbQuitarServicio = new System.Windows.Forms.ComboBox();
             this.TxtAgregarServicio = new System.Windows.Forms.TextBox();
@@ -59,21 +60,15 @@
             this.lbl3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txbCampo1 = new System.Windows.Forms.TextBox();
+            this.txbCampo2 = new System.Windows.Forms.TextBox();
+            this.txbCampo3 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txbCampo4 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.OPFL_img = new System.Windows.Forms.OpenFileDialog();
             this.GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pcb_logoprew)).BeginInit();
@@ -99,7 +94,6 @@
             this.GroupBox2.Controls.Add(this.BtnEditar2);
             this.GroupBox2.Controls.Add(this.BtnEditar);
             this.GroupBox2.Controls.Add(this.BtnGuardarCambios);
-            this.GroupBox2.Controls.Add(this.textBox1);
             this.GroupBox2.Controls.Add(this.label7);
             this.GroupBox2.Controls.Add(this.label6);
             this.GroupBox2.Controls.Add(this.label5);
@@ -138,6 +132,7 @@
             this.BtnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click_1);
             // 
             // BtnEditar2
             // 
@@ -203,20 +198,13 @@
             this.BtnGuardarCambios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnGuardarCambios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnGuardarCambios.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(385, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(28, 22);
-            this.textBox1.TabIndex = 485;
-            this.textBox1.Visible = false;
+            this.BtnGuardarCambios.Click += new System.EventHandler(this.BtnGuardarCambios_Click_1);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Webdings", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label7.Location = new System.Drawing.Point(332, 107);
+            this.label7.Location = new System.Drawing.Point(178, 107);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 36);
             this.label7.TabIndex = 482;
@@ -226,7 +214,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Webdings", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label6.Location = new System.Drawing.Point(187, 107);
+            this.label6.Location = new System.Drawing.Point(326, 107);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 36);
             this.label6.TabIndex = 481;
@@ -303,13 +291,13 @@
             // GroupBox1
             // 
             this.GroupBox1.Controls.Add(this.label22);
-            this.GroupBox1.Controls.Add(this.comboBox5);
+            this.GroupBox1.Controls.Add(this.cmbprioridad);
             this.GroupBox1.Controls.Add(this.iconButton3);
             this.GroupBox1.Controls.Add(this.BtnQuitar);
             this.GroupBox1.Controls.Add(this.iconButton1);
             this.GroupBox1.Controls.Add(this.textBox2);
             this.GroupBox1.Controls.Add(this.label10);
-            this.GroupBox1.Controls.Add(this.comboBox1);
+            this.GroupBox1.Controls.Add(this.cmbPreview);
             this.GroupBox1.Controls.Add(this.label8);
             this.GroupBox1.Controls.Add(this.CmbQuitarServicio);
             this.GroupBox1.Controls.Add(this.TxtAgregarServicio);
@@ -322,6 +310,32 @@
             this.GroupBox1.TabIndex = 475;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "TIPOS DE SERVICIOS";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label22.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(38, 85);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(72, 18);
+            this.label22.TabIndex = 502;
+            this.label22.Text = "Prioridad:";
+            // 
+            // cmbprioridad
+            // 
+            this.cmbprioridad.Font = new System.Drawing.Font("Californian FB", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbprioridad.FormattingEnabled = true;
+            this.cmbprioridad.Items.AddRange(new object[] {
+            "Baja",
+            "Media",
+            "Alta"});
+            this.cmbprioridad.Location = new System.Drawing.Point(120, 85);
+            this.cmbprioridad.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbprioridad.Name = "cmbprioridad";
+            this.cmbprioridad.Size = new System.Drawing.Size(190, 22);
+            this.cmbprioridad.TabIndex = 501;
+            this.cmbprioridad.Text = "Seleccione";
             // 
             // iconButton3
             // 
@@ -343,6 +357,7 @@
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click_1);
             // 
             // BtnQuitar
             // 
@@ -356,7 +371,7 @@
             this.BtnQuitar.IconColor = System.Drawing.Color.White;
             this.BtnQuitar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnQuitar.IconSize = 16;
-            this.BtnQuitar.Location = new System.Drawing.Point(319, 165);
+            this.BtnQuitar.Location = new System.Drawing.Point(319, 178);
             this.BtnQuitar.Name = "BtnQuitar";
             this.BtnQuitar.Size = new System.Drawing.Size(92, 24);
             this.BtnQuitar.TabIndex = 496;
@@ -364,6 +379,7 @@
             this.BtnQuitar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnQuitar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnQuitar.UseVisualStyleBackColor = false;
+            this.BtnQuitar.Click += new System.EventHandler(this.BtnQuitar_Click);
             // 
             // iconButton1
             // 
@@ -385,6 +401,7 @@
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click_1);
             // 
             // textBox2
             // 
@@ -406,16 +423,16 @@
             this.label10.TabIndex = 490;
             this.label10.Text = "Numero de Cajas:";
             // 
-            // comboBox1
+            // cmbPreview
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Californian FB", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(129, 256);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(170, 22);
-            this.comboBox1.TabIndex = 489;
-            this.comboBox1.Text = "Seleccione";
+            this.cmbPreview.Font = new System.Drawing.Font("Californian FB", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPreview.FormattingEnabled = true;
+            this.cmbPreview.Location = new System.Drawing.Point(129, 256);
+            this.cmbPreview.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbPreview.Name = "cmbPreview";
+            this.cmbPreview.Size = new System.Drawing.Size(170, 22);
+            this.cmbPreview.TabIndex = 489;
+            this.cmbPreview.Text = "Seleccione";
             // 
             // label8
             // 
@@ -432,7 +449,7 @@
             // 
             this.CmbQuitarServicio.Font = new System.Drawing.Font("Californian FB", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbQuitarServicio.FormattingEnabled = true;
-            this.CmbQuitarServicio.Location = new System.Drawing.Point(126, 165);
+            this.CmbQuitarServicio.Location = new System.Drawing.Point(126, 180);
             this.CmbQuitarServicio.Margin = new System.Windows.Forms.Padding(2);
             this.CmbQuitarServicio.Name = "CmbQuitarServicio";
             this.CmbQuitarServicio.Size = new System.Drawing.Size(170, 22);
@@ -453,7 +470,7 @@
             this.label9.AutoSize = true;
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label9.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(4, 169);
+            this.label9.Location = new System.Drawing.Point(6, 180);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(106, 18);
             this.label9.TabIndex = 9;
@@ -487,16 +504,12 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.iconButton2);
-            this.groupBox3.Controls.Add(this.comboBox2);
-            this.groupBox3.Controls.Add(this.comboBox3);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.textBox6);
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.txbCampo1);
+            this.groupBox3.Controls.Add(this.txbCampo2);
+            this.groupBox3.Controls.Add(this.txbCampo3);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.txbCampo4);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -527,77 +540,34 @@
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click_1);
             // 
-            // comboBox2
+            // txbCampo1
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Californian FB", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(300, 81);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(72, 22);
-            this.comboBox2.TabIndex = 503;
-            this.comboBox2.Text = "Seleccione";
+            this.txbCampo1.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCampo1.Location = new System.Drawing.Point(84, 33);
+            this.txbCampo1.Margin = new System.Windows.Forms.Padding(4);
+            this.txbCampo1.Name = "txbCampo1";
+            this.txbCampo1.Size = new System.Drawing.Size(89, 22);
+            this.txbCampo1.TabIndex = 498;
             // 
-            // comboBox3
+            // txbCampo2
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Californian FB", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(305, 135);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(72, 22);
-            this.comboBox3.TabIndex = 502;
-            this.comboBox3.Text = "Seleccione";
+            this.txbCampo2.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCampo2.Location = new System.Drawing.Point(84, 84);
+            this.txbCampo2.Margin = new System.Windows.Forms.Padding(4);
+            this.txbCampo2.Name = "txbCampo2";
+            this.txbCampo2.Size = new System.Drawing.Size(89, 22);
+            this.txbCampo2.TabIndex = 497;
             // 
-            // label17
+            // txbCampo3
             // 
-            this.label17.AutoSize = true;
-            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label17.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(181, 135);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(119, 18);
-            this.label17.TabIndex = 501;
-            this.label17.Text = " Tipo de Servicio:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label14.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(234, 84);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(66, 18);
-            this.label14.TabIndex = 499;
-            this.label14.Text = " Servicio:";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(84, 33);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(89, 22);
-            this.textBox6.TabIndex = 498;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(84, 84);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(89, 22);
-            this.textBox5.TabIndex = 497;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(84, 129);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(89, 22);
-            this.textBox4.TabIndex = 496;
+            this.txbCampo3.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCampo3.Location = new System.Drawing.Point(84, 129);
+            this.txbCampo3.Margin = new System.Windows.Forms.Padding(4);
+            this.txbCampo3.Name = "txbCampo3";
+            this.txbCampo3.Size = new System.Drawing.Size(89, 22);
+            this.txbCampo3.TabIndex = 496;
             // 
             // label13
             // 
@@ -621,14 +591,14 @@
             this.label16.TabIndex = 494;
             this.label16.Text = "Campo 2:";
             // 
-            // textBox3
+            // txbCampo4
             // 
-            this.textBox3.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(84, 177);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(89, 22);
-            this.textBox3.TabIndex = 491;
+            this.txbCampo4.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCampo4.Location = new System.Drawing.Point(84, 177);
+            this.txbCampo4.Margin = new System.Windows.Forms.Padding(4);
+            this.txbCampo4.Name = "txbCampo4";
+            this.txbCampo4.Size = new System.Drawing.Size(89, 22);
+            this.txbCampo4.TabIndex = 491;
             // 
             // label12
             // 
@@ -673,32 +643,6 @@
             this.iconButton4.UseVisualStyleBackColor = false;
             this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
-            // comboBox5
-            // 
-            this.comboBox5.Font = new System.Drawing.Font("Californian FB", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "Baja",
-            "Media",
-            "Alta"});
-            this.comboBox5.Location = new System.Drawing.Point(120, 85);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(190, 22);
-            this.comboBox5.TabIndex = 501;
-            this.comboBox5.Text = "Seleccione";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label22.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(38, 85);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(72, 18);
-            this.label22.TabIndex = 502;
-            this.label22.Text = "Prioridad:";
-            // 
             // OPFL_img
             // 
             this.OPFL_img.FileName = "openFileDialog1";
@@ -742,11 +686,10 @@
         internal System.Windows.Forms.PictureBox Pcb_logoprew;
         internal System.Windows.Forms.TextBox TxtNomNegocio;
         internal System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         internal System.Windows.Forms.GroupBox GroupBox1;
         internal System.Windows.Forms.TextBox textBox2;
         internal System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbPreview;
         internal System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox CmbQuitarServicio;
         internal System.Windows.Forms.TextBox TxtAgregarServicio;
@@ -756,16 +699,12 @@
         internal System.Windows.Forms.GroupBox groupBox3;
         internal System.Windows.Forms.Label label13;
         internal System.Windows.Forms.Label label16;
-        internal System.Windows.Forms.TextBox textBox3;
+        internal System.Windows.Forms.TextBox txbCampo4;
         internal System.Windows.Forms.Label label12;
         internal System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox3;
-        internal System.Windows.Forms.Label label17;
-        internal System.Windows.Forms.Label label14;
-        internal System.Windows.Forms.TextBox textBox6;
-        internal System.Windows.Forms.TextBox textBox5;
-        internal System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox2;
+        internal System.Windows.Forms.TextBox txbCampo1;
+        internal System.Windows.Forms.TextBox txbCampo2;
+        internal System.Windows.Forms.TextBox txbCampo3;
         private FontAwesome.Sharp.IconButton BtnGuardarCambios;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
@@ -776,7 +715,7 @@
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton BtnBuscar;
         internal System.Windows.Forms.Label label22;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cmbprioridad;
         private System.Windows.Forms.OpenFileDialog OPFL_img;
     }
 }

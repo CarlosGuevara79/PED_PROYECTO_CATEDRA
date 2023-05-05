@@ -30,18 +30,18 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Forms
         private void InitializeComponent()
         {
             this.panel_l = new System.Windows.Forms.Panel();
-            this.panel_cola = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.lbl_atendido = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel_cola = new System.Windows.Forms.Panel();
             this.panel_l.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_l
             // 
-            this.panel_l.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.panel_l.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_l.Controls.Add(this.lbl_atendido);
             this.panel_l.Controls.Add(this.label1);
@@ -51,24 +51,15 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Forms
             this.panel_l.Size = new System.Drawing.Size(214, 425);
             this.panel_l.TabIndex = 0;
             // 
-            // panel_cola
+            // lbl_atendido
             // 
-            this.panel_cola.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_cola.Location = new System.Drawing.Point(234, 13);
-            this.panel_cola.Name = "panel_cola";
-            this.panel_cola.Size = new System.Drawing.Size(554, 425);
-            this.panel_cola.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(39, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 155);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.lbl_atendido.AutoSize = true;
+            this.lbl_atendido.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_atendido.Location = new System.Drawing.Point(43, 249);
+            this.lbl_atendido.Name = "lbl_atendido";
+            this.lbl_atendido.Size = new System.Drawing.Size(12, 13);
+            this.lbl_atendido.TabIndex = 2;
+            this.lbl_atendido.Text = "\"";
             // 
             // label1
             // 
@@ -81,15 +72,25 @@ namespace ProyectoCatedra_PED_MR190768_GM172474_CM221954.Forms
             this.label1.TabIndex = 1;
             this.label1.Text = "Ultimo atenido:";
             // 
-            // lbl_atendido
+            // pictureBox1
             // 
-            this.lbl_atendido.AutoSize = true;
-            this.lbl_atendido.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_atendido.Location = new System.Drawing.Point(43, 249);
-            this.lbl_atendido.Name = "lbl_atendido";
-            this.lbl_atendido.Size = new System.Drawing.Size(12, 13);
-            this.lbl_atendido.TabIndex = 2;
-            this.lbl_atendido.Text = "\"";
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(39, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(131, 155);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel_cola
+            // 
+            this.panel_cola.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_cola.Location = new System.Drawing.Point(234, 13);
+            this.panel_cola.Name = "panel_cola";
+            this.panel_cola.Size = new System.Drawing.Size(554, 425);
+            this.panel_cola.TabIndex = 1;
             // 
             // Form3
             // 

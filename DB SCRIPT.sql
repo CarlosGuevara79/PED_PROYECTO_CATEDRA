@@ -88,3 +88,5 @@ values ('Guest',
 'Password01',
 'M',
 '2003-02-17');
+
+Select * from usuario
